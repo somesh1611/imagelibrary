@@ -51,13 +51,26 @@
           <div class="card border-0">
             <img src={{x.photo.url}} class="card-img-top" height='200px' style='object-fit: contain;'>
           </div>
+
+          <div>
+          
+            
+          </div>
           <div class="card-footer border-0 bg-white text-center">
             
             <small class="text-primary">Uploaded By {{x.name}}</small>
             <br>
             <a href={{x.photo.url}} class='link-success' download><small>Download</small></a>
-      
+            <br>
+            
+            {% if x.file %}
+            
+             <a href={{x.file.url}} class='link-success' download><small>{{x.file}}</small></a>
+            
+            {% endif %}
+
             </div>
+            
           </div>
         
         {% endfor %}
